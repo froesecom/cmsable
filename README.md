@@ -1,5 +1,6 @@
 # Cmsable
 ---------
+Notes: This is a bit of bastardisation of codeindulgance's (https://github.com/codeindulgence) gem. This hack prevents an error in the development environment: "A copy of Cmsable::CmsableHelper has been removed from the module tree but is still active!". The error is caused by Rails unloading loaded classes in the dev environment.
 
 Add inline editable content to pages.
 
@@ -19,6 +20,11 @@ Add to your routes
 
 ```ruby
   mount Cmsable::Engine => '/cmsable'
+```
+
+Add to your application_helper.rb
+```ruby
+  include Cmsable::CmsableHelper
 ```
 
 Install and run the migrations if you want to use the built in model
