@@ -3,8 +3,6 @@ module Cmsable
     def update
       model = params[:model].constantize
 
-      render text: false and return if cannot? :update, model
-
       record = model.find(params[:id])
       body = params.require(:content).permit(:body)[:body]
       attribute = model.cmsable_body
