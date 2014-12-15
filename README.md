@@ -9,7 +9,7 @@ Add inline editable content to pages.
 Add to your Gemfile
 
 ```ruby
-gem 'cmsable'
+gem 'cmsable', :git => 'https://github.com/froesecom/cmsable'
 ```
 
 Get Dependencies
